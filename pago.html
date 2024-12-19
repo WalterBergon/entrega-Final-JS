@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="pago-body">
+    <h1 class="pago-h1">Pago</h1>
+    <form id="formPago">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="metodoPago">Método de Pago:</label>
+        <select id="metodoPago" required>
+            <option value="tarjeta">Tarjeta de Crédito</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <div id="detallesTarjeta" style="display:none;">
+            <label for="numeroTarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numeroTarjeta" maxlength="16">
+        </div>
+
+        <button type="submit">Pagar</button>
+        <button type="button" id="volverCarrito">Volver al carrito</button>
+    </form>
+
+    <!-- Script de pago.js -->
+    <script src="./pago.js"></script>
+</body>
+
+</html>
